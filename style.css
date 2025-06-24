@@ -1,51 +1,74 @@
-body{
-padding    : 0;
-margin     : 0;
-font-family: Helvetica;
-}
-#header{
-position: fixed;
-top     : 0;
-left    : 0;
-z-index : 500;
-width   :100%;
-height  :80px;
-background-image  : url('pineCityZooImages/images/wood-bg.png');
-background-repeat: repeat-x;
-}
-#header img{
-display: block;
-margin : auto;
-height : 70%;
-padding-top: 15px;
+/* Mobile-first responsive design */
+* {
+    box-sizing: border-box;
 }
 
-#tabs-top{
-position: fixed;
-top     : 80px;
-left    : 0;
-z-index : 500;
-width   : 100%;
-height  : 40px;
-background-color: darkgreen;
-}
-#tabs-top a{
-float   : left;
-display : block;
-width   : 33%;
-height  :35px;
-font-weight : 700;
-color       : white;
-text-align  : center;
-text-decoration : none;
-padding-top     : 12px;  
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
 }
 
-
-#main-home{
-    margin-top: 120px;
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
     width: 100%;
-    height: calc(100vh - 160px); /* 120px top + 40px bottom */
+    height: 60px;
+    background-image: url('pineCityZooImages/images/wood-bg.png');
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+
+#header img {
+    display: block;
+    margin: auto;
+    height: 45px;
+    padding-top: 8px;
+    max-width: 200px;
+}
+
+#tabs-top {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 45px;
+    background-color: darkgreen;
+    display: flex;
+}
+
+#tabs-top a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#tabs-top a:last-child {
+    border-right: none;
+}
+
+#tabs-top a:hover,
+#tabs-top a:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#main-home {
+    margin-top: 105px;
+    width: 100%;
+    height: calc(100vh - 150px);
     padding: 0;
     display: flex;
     justify-content: center;
@@ -53,18 +76,18 @@ padding-top     : 12px;
     overflow: hidden;
 }
 
-#main-home img{
+#main-home img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-#main-map{
-    margin-top: 120px;
+#main-map {
+    margin-top: 105px;
     width: 100%;
-    height: calc(100vh - 160px);
-    padding: 0;
+    height: calc(100vh - 150px);
+    padding: 10px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -73,173 +96,382 @@ padding-top     : 12px;
     background-size: cover;
 }
 
-#main-map img{
+#main-map img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     display: block;
     width: auto;
     height: auto;
-    
 }
 
-
-#tabs-bottom{
-position : fixed;
-bottom   : 0;
-left     : 0;
-z-index  : 500;
-width    : 100%;
-height   : 40px;
-background-color: darkgreen;
-}
-#tabs-bottom a{
-float : left;
-display : block;
-width : 50%;
-height : 35px;
-font-weight : 700;
-color       : white;
-text-align  : center;
-text-decoration : none;
-padding-top     : 12px;  
+#tabs-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 45px;
+    background-color: darkgreen;
+    display: flex;
 }
 
-#main{
-margin-top: 119px;
-width: 100%;
-min-height: calc(100vh - 160px);
-background: url('pineCityZooImages/images/map-blur.png');
-background-size: 100% auto;
-background-repeat: no-repeat;
-background-attachment: local;
-padding: 0;
+#tabs-bottom a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-#content{
-padding-top: 1px;
-padding-bottom: 50px;
-width: 100%;
-margin: 0 auto;
+#tabs-bottom a:last-child {
+    border-right: none;
 }
 
-a.info-box{
-text-decoration : none;
-background      : rgba(195, 207, 57, 0.8);
-width           : 90%;
-height          : 90px;
-display         : block;
-margin          : auto;
-margin-top      : 12px;
-padding         : 1px;
+#tabs-bottom a:hover,
+#tabs-bottom a:active {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.info-box img{
-height : 70px;
-margin : 10px;
-float  : left;
-}
-.info-box h3{
-padding : 0;
-margin-bottom :0;
-width : 90%;
-color : #572800;
-}
-.info-box p{
-margin  : 0;
-padding : 0;
-width   : 90%;
-color   : #131313;
-font-size: 14px;
-}
-.info-box img.right{
-float      : right;
-margin-top : 25px;
-height     : 40px;
+#main {
+    margin-top: 105px;
+    width: 100%;
+    min-height: calc(100vh - 150px);
+    background: url('pineCityZooImages/images/map-blur.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    padding: 0;
+    padding-bottom: 45px;
 }
 
-#info-box-full{
-background-color : rgba(255, 255, 255, .8) ;
-width   : 90%;
-display : block;
-margin  : auto;
-margin-top : 12px;
-padding    : 10px;
+#content {
+    padding: 15px 10px 20px 10px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
 }
-#info-box-full img{
-    width: 60%;
+
+a.info-box {
+    text-decoration: none;
+    background: rgba(195, 207, 57, 0.9);
+    width: 100%;
+    min-height: 80px;
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+a.info-box:hover,
+a.info-box:active {
+    background: rgba(195, 207, 57, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.info-box img {
+    height: 60px;
+    width: 60px;
+    margin: 0 12px 0 0;
+    float: left;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.info-box h3 {
+    padding: 0;
+    margin: 0 0 5px 0;
+    color: #572800;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info-box p {
+    margin: 0;
+    padding: 0;
+    color: #131313;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.info-box img.right {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    float: none;
+    height: 24px;
+    width: 24px;
+    margin: 0;
+}
+
+#info-box-full {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 20px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#info-box-full img {
+    width: 100%;
     max-width: 400px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
+    border-radius: 8px;
 }
-#info-box-full h3{
-text-align : center;
+
+#info-box-full h3 {
+    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    color: #572800;
+}
+
+#info-box-full p {
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#info-box-full strong {
+    display: block;
+    margin: 20px 0 10px 0;
+    font-size: 16px;
+    color: #572800;
+}
+
+#info-box-full ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+#info-box-full li {
+    margin-bottom: 8px;
+    line-height: 1.4;
 }
 
 /* Weather page specific styling */
-#info-box-weather{
-background-color : rgba(255, 255, 255, .8) ;
-width   : 90%;
-display : block;
-margin  : auto;
-margin-top : 12px;
-padding    : 10px;
-text-align : center;
-}
-#info-box-weather h3{
-text-align : center;
-}
-#info-box-weather img{
-height : 30px;
-width  : 30px;
-margin : 10px auto;
-display: inline-block;
-}
-#info-box-weather table{
-margin: 0 auto;
-text-align: center;
-}
-#info-box-weather td{
-text-align: center;
-padding: 5px;
+#info-box-weather {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Weather icon specific styling - higher specificity to override the general img rule */
-#info-box-full img.info-box-weather-icon{
-height : 30px;
-width  : 30px;
-margin : 10px;
-float  :left;
+#info-box-weather h3 {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-h1.info-box-weather-icon{
-font-size  : 65px;
-font-weight: 200;
-padding    : 0;
-margin     : 0;
+#info-box-weather img {
+    height: 30px;
+    width: 30px;
+    margin: 10px auto;
+    display: inline-block;
 }
 
-input{
-width: 100%;
-height: 25px;
-margin : 12px 0;
-border : 1px solid #929292;
+#info-box-weather table {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
 }
-textarea{
-width: 100%;
-height :25px;
-margin : 12px 0;
-border : 1px solid #929292;
+
+#info-box-weather td {
+    text-align: center;
+    padding: 8px 4px;
+    font-size: 14px;
 }
-.button{
-display : block;
-background-color: forestgreen;
-text-decoration : none;
-text-align  : center;
-color       : white;
-font-size   : 16px;
-font-weight : 600;
-margin : 12px 0;
-padding : 8px 0;
+
+#info-box-full img.info-box-weather-icon {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    float: left;
+}
+
+h1.info-box-weather-icon {
+    font-size: 48px;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+}
+
+/* Form elements */
+input {
+    width: 100%;
+    height: 45px;
+    margin: 12px 0;
+    border: 2px solid #929292;
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 16px;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    border-color: darkgreen;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    margin: 12px 0;
+    border: 2px solid #929292;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    -webkit-appearance: none;
+}
+
+textarea:focus {
+    border-color: darkgreen;
+    outline: none;
+}
+
+.button {
+    display: block;
+    background-color: forestgreen;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-appearance: none;
+}
+
+.button:hover,
+.button:active {
+    background-color: #228B22;
+}
+
+/* Tablet optimizations */
+@media screen and (min-width: 768px) {
+    #header {
+        height: 80px;
+    }
+    
+    #header img {
+        height: 60px;
+        padding-top: 10px;
+    }
+    
+    #tabs-top,
+    #tabs-bottom {
+        height: 50px;
+    }
+    
+    #tabs-top a,
+    #tabs-bottom a {
+        font-size: 16px;
+    }
+    
+    #main {
+        margin-top: 130px;
+    }
+    
+    #main-home,
+    #main-map {
+        margin-top: 130px;
+        height: calc(100vh - 180px);
+    }
+    
+    #content {
+        padding: 20px;
+        max-width: 800px;
+    }
+    
+    a.info-box {
+        min-height: 100px;
+        padding: 15px;
+    }
+    
+    .info-box img {
+        height: 70px;
+        width: 70px;
+    }
+    
+    .info-box h3 {
+        font-size: 20px;
+    }
+    
+    .info-box p {
+        font-size: 15px;
+    }
+    
+    #info-box-full {
+        padding: 25px 20px;
+    }
+    
+    #info-box-full h3 {
+        font-size: 24px;
+    }
+}
+
+/* Desktop optimizations */
+@media screen and (min-width: 1024px) {
+    #content {
+        max-width: 1000px;
+        padding: 25px;
+    }
+    
+    /* Two-column layout for animal grid on desktop */
+    #content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    a.info-box {
+        width: calc(50% - 7.5px);
+        margin-bottom: 0;
+    }
+    
+    #info-box-full {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    a.info-box:hover {
+        transform: none;
+    }
+    
+    a.info-box:active {
+        transform: scale(0.98);
+    }
+    
+    #tabs-top a:hover,
+    #tabs-bottom a:hover {
+        background-color: transparent;
+    }
 }
